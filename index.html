@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fitness Tracker</title>
+  <meta name="description" content="Personal workout, nutrition, bodyweight and habit tracker. Works offline; data stays on your device.">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+  <!-- iPhone home-screen app settings -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fitness">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="page-title">Fitness</h1>
+    <a id="settings-link" class="icon-btn" href="#/settings" aria-label="Settings"></a>
+  </header>
+
+  <div id="update-banner" class="update-banner" hidden>
+    <span>A new version is ready.</span><button class="btn small primary">Update now</button>
+  </div>
+
+  <main id="main"><noscript><p class="pad">This app needs JavaScript turned on.</p></noscript></main>
+
+  <div id="timer-bar" class="timer-bar" role="timer" aria-live="off"></div>
+  <nav class="tabbar" aria-label="Sections"></nav>
+  <div id="sheet-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
