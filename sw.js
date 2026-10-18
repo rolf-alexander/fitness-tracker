@@ -1,7 +1,7 @@
 // Service worker: saves a copy of the app on your phone so it opens instantly and works offline.
 // IMPORTANT: when you change any file, bump VERSION (and APP_VERSION in js/settings-store.js)
 // so phones download the new version. Add any new file to ASSETS.
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const CACHE = `fitness-${VERSION}`;
 const ASSETS = [
   './',

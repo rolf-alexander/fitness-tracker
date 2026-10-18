@@ -87,9 +87,12 @@ function registerServiceWorker() {
       });
     });
   }).catch(err => console.warn('Offline support unavailable:', err));
+  // Reload only after you tap "Update now" (an old version was running). On the very first
+  // visit the offline copy installs in the background and must NOT reload the page mid-use.
+  const hadController = !!navigator.serviceWorker.controller;
   let reloaded = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (!reloaded) { reloaded = true; location.reload(); }
+    if (hadController && !reloaded) { reloaded = true; location.reload(); }
   });
 }
 

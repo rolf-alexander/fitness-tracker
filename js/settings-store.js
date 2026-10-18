@@ -2,7 +2,7 @@
 import { getKV, setKV, all, putMany, uid } from './db.js';
 
 // Bump this together with VERSION in sw.js whenever you publish a change.
-export const APP_VERSION = '1.0.0';
+export const APP_VERSION = '1.0.1';
 
 export const DEFAULT_SETTINGS = {
   theme: 'auto',            // 'auto' follows the phone, or 'light' / 'dark'
